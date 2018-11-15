@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>ea-graphic-line</title>
+      <link href="main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="contentGraphic">
+      <ea-graphic-line :datos="options"></ea-graphic-line>
+    </div>
+  </body>
+</html>
+
+<script src="../dist/build.js"></script>
+<script>
+    graphicLine.options = {
+          "axisYFormat": "k €",
+          "minValue": "20000",
+          "maxValue": "120000",
+          "numDivisions": "6",
+          "key": "N",
+          "tooltip": true,
+          "labelsSeries": ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"],
+          "series": {
+            "serie1": {
+              "label": "2017",
+              "data": ["1788", "25000", "3788", "4000", "5788", "6788", "", "8788", "9000", "10788", "11788", "12000"]
+            },
+            "serie2": {
+              "label": "2018",
+              "data": ["1788", "25000", "3788", "", "5788", "6788", "7000", "8788", "9000", "10788", "11788", "12000"]
+            }
+          }
+        }
+  </script>
+
+
+
